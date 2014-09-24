@@ -15,9 +15,9 @@ development:
   username: root
 
 production:
-  adapter: mysql2
+  adapter: postgresql
+  encoding: unicode
   database: duijneveld
-  username: root
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
