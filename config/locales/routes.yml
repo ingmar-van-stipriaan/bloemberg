@@ -1,0 +1,4 @@
+nl:
+  routes:
+    projects: "projecten"
+    services: "diensten"

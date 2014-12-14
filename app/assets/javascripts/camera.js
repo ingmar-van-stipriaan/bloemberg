@@ -35,7 +35,7 @@
 
 		loader				: 'pie',	//pie, bar, none (even if you choose "pie", old browsers like IE8- can't display it... they will display always a loading bar)
 
-		loaderColor			: '#F42121',
+		loaderColor			: '#eeeeee',
 
 		loaderBgColor		: '#222222',
 

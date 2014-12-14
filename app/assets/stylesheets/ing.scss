@@ -1,0 +1,30 @@
+.odd, .even{
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.even{
+  >div:first-child{
+   float: right;
+  }
+}
+
+a[name] {
+  padding-top: 80px;
+  margin-top: -80px;
+  display: inline-block;
+}
+.service p{
+  min-height: 100px;
+}
+
+.text1{
+  padding-top: 0;
+}
+
+#form label.error{
+  height: auto;
+  min-height: 30px;
+  color: red;
+}

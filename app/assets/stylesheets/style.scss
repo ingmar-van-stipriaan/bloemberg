@@ -1,21 +1,5 @@
-//colors
-$color_mountain_mist_approx: #979797;
-$color_mine_shaft_approx: #2f3236;
-$color_fuscous_gray_approx: #535353;
-$color_bright_gray_approx: #41454c;
-$color_sea_buckthorn_approx: #F42121;
-$color_suva_gray_approx: #888888;
-$white: #fff;
-$color_spring_wood_approx: #f6f4f1;
-$color_cape_cod_approx: #3f4246;
-$color_log_cabin_approx: #202020;
-$color_delta_approx: #a2a2a2;
-$color_silver_approx: #bfbebb;
-$color_ebb_approx: #e6e4e1;
+@import "mixins.scss";
 
-//@extend-elements
-//original selectors
-//h1,  h2,  h3,  h4,  h5,  h6
 %font_style_extend {
 	font-family: Roboto, sans-serif;
 	color: $color_fuscous_gray_approx;
@@ -25,11 +9,9 @@ $color_ebb_approx: #e6e4e1;
 html {
 	width: 100%;
 }
-* {
-}
 body {
 	font: 14px/24px Roboto, sans-serif;
-	color: $color_mountain_mist_approx;
+	color: $grey;
 	position: relative;
 	font-weight: 300;
 	min-width: 1032px;
@@ -77,7 +59,7 @@ h3 {
 	margin-bottom: 16px;
 	font-size: 14px;
 	line-height: 30px;
-	color: $color_sea_buckthorn_approx;
+	color: $primary;
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -85,7 +67,7 @@ h4 {
 	@extend %font_style_extend;
 	font-size: 18px;
 	line-height: 24px;
-	color: $color_sea_buckthorn_approx;
+	color: $primary;
 	text-transform: uppercase;
 }
 h5 {
@@ -141,7 +123,7 @@ ul {
 			display: block;
 			float: left;
 			font-size: 15px;
-			color: $color_sea_buckthorn_approx;
+			color: $primary;
 		}
 		div {
 			overflow: hidden;
@@ -175,7 +157,7 @@ a {
 	outline: none;
 	transition: 0.5s ease;
 	&:hover {
-		color: $color_sea_buckthorn_approx;
+		color: $primary;
 	}
 	&.btn {
 		margin-top: 27px;
@@ -187,7 +169,7 @@ a {
 		padding: 10px 13px 10px 15px;
 		text-transform: uppercase;
 		color: $white;
-		background-color: $color_sea_buckthorn_approx;
+		background-color: $primary;
 		i {
 			display: inline-block;
 			margin-left: 10px;
@@ -205,7 +187,7 @@ a {
 		width: 103px;
 		height: 103px;
 		line-height: 103px;
-		background-color: $color_sea_buckthorn_approx;
+		background-color: $primary;
 		color: $white;
 		font-size: 56px;
 		text-align: center;
@@ -224,7 +206,7 @@ a {
 		display: block;
 		padding: 1px;
 		margin-bottom: 13px;
-		border: 1px solid $color_mountain_mist_approx;
+		border: 1px solid $grey;
 		img {
 			transition: 0.5s ease;
 			box-sizing: border-box;
@@ -246,7 +228,7 @@ a {
 }
 .img_inner {
 	padding: 1px;
-	border: 1px solid $color_mountain_mist_approx;
+	border: 1px solid $grey;
 	max-width: 100%;
 	margin-top: 7px;
 	box-sizing: border-box;
@@ -346,9 +328,6 @@ header {
 		color: $white;
 		font-size: 14px;
 		line-height: 14px;
-		&:hover {
-			color: $color_log_cabin_approx;
-		}
 		i{
 			padding-right: 5px;
 		}
@@ -414,7 +393,7 @@ header {
 		float: right;
 		margin-top: 38px;
 		border-radius: 60px;
-		background-color: $color_sea_buckthorn_approx;
+		background-color: $primary;
 		font-size: 22px;
 		line-height: 25px;
 		padding: 14px 43px 18px 48px;
@@ -437,7 +416,7 @@ header {
 	overflow: hidden;
 	font-size: 12px;
 	time {
-		color: $color_sea_buckthorn_approx;
+		color: $primary;
 		font-weight: bold;
 		position: relative;
 		top: -4px;
@@ -512,7 +491,7 @@ header {
 		float: none !important;
 		display: block;
 		width: 100%;
-		border: 1px solid $color_mountain_mist_approx;
+		border: 1px solid $grey;
 		padding: 1px;
 		background-color: $white;
 		margin-bottom: 28px;
@@ -564,7 +543,7 @@ footer {
 	}
 	span {
 		font-size: 12px;
-		color: $color_sea_buckthorn_approx;
+		color: $primary;
 	}
 	p {
 		margin-bottom: 22px;
@@ -581,7 +560,7 @@ footer {
 	padding-bottom: 2px;
 	position: relative;
 	&:after {
-		background-color: $color_mountain_mist_approx;
+		background-color: $grey;
 		width: 1px;
 		top: 0;
 		content: '';
@@ -599,7 +578,7 @@ footer {
 		float: left;
 		color: $white;
 		text-transform: uppercase;
-		color: $color_mountain_mist_approx;
+		color: $grey;
 		&.current a {
 			color: $white;
 		}
@@ -828,10 +807,7 @@ footer {
 		margin-top: 20px;
 	}
 }
-a[href^="tel:"] {
-	color: inherit;
-	text-decoration: none;
-}
+
 .new+.new {
 	margin-top: 6px;
 }

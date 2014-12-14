@@ -1,13 +1,8 @@
 footer
   .container_12
     ul.footer_menu
-      li.current
-        a href="index.html"  Duijneveld voegwerken
-      li
-        a href="index-1.html"  Diensten
-      li
-        a href="index-2.html"  Projecten
-      li
-        a href="index-3.html"  Foto gallerij
-      li
-        a href="index-4.html"  Contact
+      = nav_link "bloemberg voegwerken", root_path
+      = nav_link "Diensten", services_path
+      = nav_link "Projecten", projects_path
+      = nav_link "Foto gallerij", gallery_path
+      = nav_link "Contact", contact_path

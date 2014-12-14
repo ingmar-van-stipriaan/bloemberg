@@ -1,0 +1,85 @@
+.content
+  .container_12
+    .grid_5
+      h2 Post adres
+      .map
+        figure
+          iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2419.7035876516848!2d4.755319600000001!3d52.6653313!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47cf571c3ef4f02b%3A0xa64790e7d13ebf7f!2sKompasweg+24%2C+1825+LW+Alkmaar!5e0!3m2!1sen!2snl!4v1415820527753" width="400" height="300" frameborder="0" style="border:0"
+        address
+          dl
+            dt.text1
+              | Kompasweg 24,
+              |  1825LW Alkmaar.
+            dd
+              span> Telefoonnummer:
+              = link_to " 06 28 11 91 88", "tel:0628119188"
+            dd
+              | E-mail:
+              a href="mailto:info@bloembergvoegwerken.nl"  info@bloembergvoegwerken.nl
+    .grid_7
+      h2 Stuur een bericht
+      form id="form" name="contact" method="post" novalidate="novalidate"
+        .success_wrapper
+          .success-message Uw bericht is verstuurd. Wij proberen u zo snel mogelijk te helpen.
+        label.name
+          input placeholder="Naam:" type="text" name="name"
+
+        label.email
+          input placeholder="E-mail:" type="text" name="email"
+
+        label.phone
+          input placeholder="Telefoonnummer:" type="text" name="phone"
+
+        label.message
+          textarea placeholder="Bericht:" name="message"
+
+        div
+          .clear
+          .btns
+            input id="submit" type="submit" name="submit" class="btn" value="Verstuur bericht"
+
+javascript:
+   $(function() {
+       $('#form').validate({
+           rules: {
+               name: {
+                   required: true,
+                   minlength: 2
+               },
+               email: {
+                   required: true,
+                   email: true
+               },
+               message: {
+                   required: true
+               }
+           },
+           messages: {
+               name: {
+                   required: "Uw naam is verplicht",
+                   minlength: "Uw naam moet uit minimaal 2 karakters bestaan"
+               },
+               email: {
+                   required: "Uw email is verplicht"
+               },
+               message: {
+                   required: "Een bericht is verplicht",
+               }
+           },
+           submitHandler: function(form) {
+               $(form).ajaxSubmit({
+                   type:"POST",
+                   data: $(form).serialize(),
+                   url:"process.php",
+                   success: function() {
+                       $('#form :input').attr('disabled', 'disabled');
+                       $('#form').fadeTo( "slow", 0.15, function() {
+                           $(this).find(':input').attr('disabled', 'disabled');
+                           $(this).find('label').css('cursor','default');
+                           $('#success').fadeIn();
+                       });
+                   }
+               });
+           }
+       });
+   });

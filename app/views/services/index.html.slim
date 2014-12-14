@@ -1,0 +1,14 @@
+.content
+  .container_12
+    .grid_12.suffix_1
+      h2 Onze diensten
+
+  - @services.each do |service|
+    a name="#{service.slug}"
+    .container_12 class="#{cycle('odd', 'even') }"
+      .grid_5
+        = image_tag service.image.crop.url, class: "img_inner fleft"
+      .grid_7
+        .text1
+          = service.title
+        = service.description.html_safe

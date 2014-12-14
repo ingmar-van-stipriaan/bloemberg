@@ -20,7 +20,10 @@
 
 /* #Base 960 Grid
 ================================================== */
-
+.row{
+  float: left;
+  width: 100%;
+}
     .container_12{ position: relative; width: 960px; margin: 0 auto; padding: 0; }
 	.grid_1,
 	.grid_2,

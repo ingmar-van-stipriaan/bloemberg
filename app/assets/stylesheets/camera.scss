@@ -1,3 +1,5 @@
+@import "mixins.scss";
+
 .slider_wrapper {
 	height: 499px;
 	margin-top: 34px;
@@ -226,7 +228,7 @@
 	font: 26px/36px 'Roboto', sans-serif;
 	color: #ffffff;
 	font-weight: lighter;
-	border-bottom: 2px solid #F42121;
+	border-bottom: 1px solid $primary;
 }
 .camera_caption p{
 	margin: 0;

@@ -4,26 +4,20 @@ header
       .grid_12
         nav.horizontal-nav.full-width.horizontalNav-notprocessed
           ul.sf-menu
-            li.current
-              a href="#"
-                strong  Duijneveld voegwerken
-            li
-              a href="#"  Diensten
-            li
-              a href="#"  Projecten
+            = nav_link "<strong>bloemberg voegwerken</strong>", root_path
+
+            li{ class="#{ current_page?(services_path) ? 'current' : '' }" }
+              = link_to "Diensten", services_path
               ul
-                li
-                  a href="#"  Haarlem
-                li
-                  a href="#"  Alkmaar
-                li
-                  a href="#"  Amsterdam
-            li
-              a href="#"  Foto gallerij
-            li
-              a href="#"  Contact
+                - Service.all.each do |service|
+                  li= link_to service.title, services_path + "#" + service.slug
+
+            = nav_link "Projecten", projects_path
+            = nav_link "Foto gallerij", gallery_path
+            = nav_link "Contact", contact_path
+
         .socials
-          = link_to "#" do
+          = link_to "tel:0628119188" do
             i.fa.fa-phone-square.fa-lg
             |  06 28 11 91 88
 

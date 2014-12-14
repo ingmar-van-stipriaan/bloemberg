@@ -1,0 +1,9 @@
+.content
+  .container_12
+    .grid_12
+      h2 Foto gallerij
+      .gallery
+        - @photos.each do |photo|
+          .grid_4.alpha
+            = link_to image_path(photo.image.url), class: "gal" do
+              = image_tag photo.image.preview.url

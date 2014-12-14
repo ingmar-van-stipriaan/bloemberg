@@ -1,0 +1,58 @@
+.content
+  .container_12
+
+    .grid_12
+      h2 Projecten
+
+    .row
+      - @projects.each do |project|
+        .grid_3
+          = image_tag project.image.thumb.url, class: "img_inner"
+          .text1
+            a href="#"
+              = project.name
+          = project.short_description
+          = link_to project, class: "btn" do
+            | lees verder
+            i.fa.fa-arrow-right
+
+    / .grid_8
+    /   h2.head1 Huidige projecten
+    /   .block1
+    /     = image_tag "page3_img2.jpg", class: "img_inner fleft"
+    /     .extra_wrapper
+    /       .text1
+    /         a href="#"  Project Zaandam
+    /       | Informatie over project Zaandam
+    /       br
+    /       a.btn href="#"
+    /         | lees verder
+    /         i.fa.fa-arrow-right
+    /   .block1
+    /     = image_tag "page3_img2.jpg", class: "img_inner fleft"
+    /     .extra_wrapper
+    /       .text1
+    /         a href="#"  Project Zaandam
+    /       | Informatie over project Zaandam
+    /       br
+    /       a.btn href="#"
+    /         | lees verder
+    /         i.fa.fa-arrow-right
+    / .grid_4
+    /   h2.head1 Overige projecten
+    /   ul.list1
+    /     li
+    /       span.fa.fa-arrow-right
+    /       a href="#"  Project 1
+    /     li
+    /       span.fa.fa-arrow-right
+    /       a href="#"  Project 2
+    /     li
+    /       span.fa.fa-arrow-right
+    /       a href="#"  Project 3
+    /     li
+    /       span.fa.fa-arrow-right
+    /       a href="#"  Project 4
+    /     li
+    /       span.fa.fa-arrow-right
+    /       a href="#"  Project 5

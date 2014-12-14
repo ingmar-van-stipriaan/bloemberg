@@ -1,0 +1,17 @@
+.content
+  .container_12
+    .grid_7.suffix_1
+      h2= @project.name
+      = image_tag @project.image.show.url, class: "img_inner"
+      p= @project.description
+
+    .grid_4
+      h2 Andere projecten
+      - if @projects.present?
+        ul.list1
+          - @projects.each do |project|
+            li
+              span.fa.fa-arrow-right
+              = link_to project.name, project
+      - else
+        span Hier komen nog meer projecten

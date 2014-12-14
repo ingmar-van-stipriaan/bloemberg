@@ -1,0 +1,20 @@
+nl:
+  activerecord:
+    models:
+      project:
+        one: "Project"
+        other: "Projecten"
+      service:
+        one: "Dienst"
+        other: "Diensten"
+      slide:
+        one: "Dia"
+        other: "Dia's"
+    attributes:
+      project:
+        name: "Naam"
+        description: "Omschrijving"
+        short_description: "Korte omschrijving"
+        image: "Afbeelding"
+        created_at: "Aangemaakt op"
+        updated_at: "Aangepast op"
